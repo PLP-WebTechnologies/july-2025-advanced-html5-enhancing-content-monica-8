@@ -3,122 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Enhanced HTML5 Form Example</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 20px auto;
-      max-width: 900px;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-    header, main, footer {
-      margin-bottom: 2em;
-    }
-    header h1 {
-      border-bottom: 2px solid #007BFF;
-      padding-bottom: 0.5em;
-      color: #007BFF;
-    }
-    nav ul {
-      list-style: none;
-      padding-left: 0;
-      display: flex;
-      gap: 1em;
-    }
-    nav ul li::before {
-      content: "•";
-      color: #007BFF;
-      padding-right: 0.3em;
-    }
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      margin: 1em 0;
-    }
-    table, th, td {
-      border: 1px solid #ccc;
-    }
-    th, td {
-      padding: 0.5em;
-      text-align: left;
-    }
-    figure {
-      max-width: 300px;
-      margin: 1em 0;
-    }
-    figure img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-    }
-    figure figcaption {
-      font-size: 0.9em;
-      text-align: center;
-      color: #555;
-      margin-top: 0.3em;
-    }
-    form {
-      background-color: #fff;
-      padding: 1.5em;
-      border-radius: 8px;
-      box-shadow: 0 0 10px #ccc;
-    }
-    form fieldset {
-      border: none;
-      margin-bottom: 1.5em;
-      padding: 0;
-    }
-    form legend {
-      font-weight: bold;
-      margin-bottom: 0.5em;
-      font-size: 1.2em;
-      color: #007BFF;
-    }
-    label {
-      display: block;
-      margin-bottom: 0.25em;
-      font-weight: 600;
-    }
-    input, select, textarea {
-      width: 100%;
-      padding: 0.4em;
-      margin-bottom: 1em;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 1em;
-      font-family: inherit;
-    }
-    input[readonly] {
-      background-color: #e9ecef;
-      cursor: not-allowed;
-    }
-    button {
-      background-color: #007BFF;
-      color: white;
-      padding: 0.6em 1.2em;
-      border: none;
-      border-radius: 4px;
-      font-size: 1em;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #0056b3;
-    }
-    .note {
-      font-size: 0.85em;
-      color: #666;
-      margin-top: -0.75em;
-      margin-bottom: 1em;
-    }
-    /* Inline labels for radio/checkbox */
-    input[type=checkbox], input[type=radio] {
-      width: auto;
-      margin-right: 0.5em;
-      vertical-align: middle;
-    }
-  </style>
+  <title>Enhanced HTML5 Form Example (No CSS)</title>
 </head>
 <body>
 
@@ -146,7 +31,7 @@
 
   <section aria-labelledby="info-table">
     <h2 id="info-table">Event Information</h2>
-    <table>
+    <table border="1" summary="Details about the event date, location, time, and price">
       <caption>Event Details</caption>
       <thead>
         <tr>
@@ -174,7 +59,7 @@
       <fieldset>
         <legend>Personal Information</legend>
 
-        <label for="fullname">Full Name *</label>
+        <label for="fullname">Full Name * </label>
         <input
           type="text"
           id="fullname"
@@ -186,9 +71,9 @@
           maxlength="50"
           aria-describedby="fullname-desc"
         />
-        <div id="fullname-desc" class="note">Enter your full legal name.</div>
+        <div id="fullname-desc">Enter your full legal name.</div>
 
-        <label for="email">Email Address *</label>
+        <label for="email">Email Address * </label>
         <input
           type="email"
           id="email"
@@ -198,9 +83,9 @@
           autocomplete="email"
           aria-describedby="email-desc"
         />
-        <div id="email-desc" class="note">We'll send confirmation to this email.</div>
+        <div id="email-desc">We'll send confirmation to this email.</div>
 
-        <label for="phone">Phone Number</label>
+        <label for="phone">Phone Number </label>
         <input
           type="tel"
           id="phone"
@@ -210,9 +95,9 @@
           autocomplete="tel"
           aria-describedby="phone-desc"
         />
-        <div id="phone-desc" class="note">Enter phone in international format starting with +254.</div>
+        <div id="phone-desc">Enter phone in international format starting with +254.</div>
 
-        <label for="dob">Date of Birth *</label>
+        <label for="dob">Date of Birth * </label>
         <input
           type="date"
           id="dob"
@@ -221,13 +106,14 @@
           max="2007-08-12"
           aria-describedby="dob-desc"
         />
-        <div id="dob-desc" class="note">You must be at least 18 years old.</div>
+        <div id="dob-desc">You must be at least 18 years old.</div>
+
       </fieldset>
 
       <fieldset>
         <legend>Address</legend>
 
-        <label for="address1">Address Line 1 *</label>
+        <label for="address1">Address Line 1 * </label>
         <input
           type="text"
           id="address1"
@@ -237,7 +123,7 @@
           autocomplete="street-address"
         />
 
-        <label for="address2">Address Line 2</label>
+        <label for="address2">Address Line 2 </label>
         <input
           type="text"
           id="address2"
@@ -246,7 +132,7 @@
           autocomplete="street-address"
         />
 
-        <label for="city">City/Town *</label>
+        <label for="city">City/Town * </label>
         <input
           type="text"
           id="city"
@@ -256,7 +142,7 @@
           autocomplete="address-level2"
         />
 
-        <label for="postcode">Postal Code *</label>
+        <label for="postcode">Postal Code * </label>
         <input
           type="text"
           id="postcode"
@@ -267,9 +153,9 @@
           autocomplete="postal-code"
           aria-describedby="postcode-desc"
         />
-        <div id="postcode-desc" class="note">5 digit postal code.</div>
+        <div id="postcode-desc">5 digit postal code.</div>
 
-        <label for="country">Country *</label>
+        <label for="country">Country * </label>
         <select id="country" name="country" required autocomplete="country">
           <option value="">Select a country</option>
           <option value="KE" selected>Kenya</option>
@@ -285,7 +171,7 @@
       <fieldset>
         <legend>Account Details</legend>
 
-        <label for="username">Username *</label>
+        <label for="username">Username * </label>
         <input
           type="text"
           id="username"
@@ -297,7 +183,7 @@
           autocomplete="username"
         />
 
-        <label for="password">Password *</label>
+        <label for="password">Password * </label>
         <input
           type="password"
           id="password"
@@ -308,9 +194,11 @@
           autocomplete="new-password"
           aria-describedby="password-desc"
         />
-        <div id="password-desc" class="note">Must be at least 8 characters.</div>
+        <div id="password-desc">
+          Must be at least 8 characters.
+        </div>
 
-        <label for="confirm-password">Confirm Password *</label>
+        <label for="confirm-password">Confirm Password * </label>
         <input
           type="password"
           id="confirm-password"
@@ -321,7 +209,7 @@
           autocomplete="new-password"
         />
 
-        <label for="referral" class="note">Referral Code (readonly)</label>
+        <label for="referral">Referral Code (readonly) </label>
         <input
           type="text"
           id="referral"
@@ -345,7 +233,7 @@
           Subscribe to newsletter
         </label>
 
-        <p>Preferred Contact Method *</p>
+        <p>Preferred Contact Method * </p>
         <label>
           <input type="radio" name="contact-method" value="email" required />
           Email
@@ -355,7 +243,7 @@
           Phone
         </label>
 
-        <label for="comments">Additional Comments</label>
+        <label for="comments">Additional Comments </label>
         <textarea
           id="comments"
           name="comments"
